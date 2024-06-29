@@ -1,7 +1,7 @@
 # Sometimes I just don't have the time to transfer every file, and remember which is all the stuff I updated since last week.
 # Working perfectly since 2023-12-21
 
-# This backs up all my selected files to my folder in the M Drive
+# This backs up all my selected files to my folder in the destination_folder
 
 import os
 import shutil
@@ -75,25 +75,16 @@ def update_last_backup_timestamp(last_backup_file):
 # Replace these paths with your actual source and destination paths
 # Keep it broken down by lines to read it easier in case I get a smaller screen
 source_folders = [r"c:\Users\jessie\Desktop\AHK Stuff", 
-                  r"c:\Users\jessie\Desktop\AJ Retail Finished Inventory", 
                   r"c:\Users\jessie\Desktop\DataScrape", 
                   r"c:\Users\jessie\Desktop\Finalized Images DONE", 
                   r"c:\Users\jessie\Desktop\Images to fix", 
-                  r"c:\Users\jessie\Desktop\Missing M Drive for me", 
-                  r"c:\Users\jessie\Desktop\Python Scrapers", 
-                  r"c:\Users\jessie\Desktop\AJ Finished Inventory Download.ahk", 
+                  r"c:\Users\jessie\Desktop\Python Scrapers",  
                   r"c:\Users\jessie\Desktop\chromedriver.exe", 
-                  r"c:\Users\jessie\Desktop\LICENSE.chromedriver", 
-                  r"c:\Users\jessie\Desktop\Tim's Actions.atn", 
-                  r"c:\Users\jessie\Desktop\New Text Document.txt",
-                  r"c:\Users\jessie\Desktop\New Computer Setup.txt",
-                  r"c:\Users\jessie\Desktop\Left align open image.ahk", 
-                  r"c:\Users\jessie\Desktop\Double Copy-Double Paste.ahk", 
-                  r"c:\Users\jessie\Desktop\quick play.ahk", 
-                  r"c:\Users\jessie\Desktop\Insert Image.ahk"]
-# destination_folder = r"M:\Jessie"
-destination_folder = r"D:\Work" # Should go to flash drive
-last_backup_file = r"C:\Users\jessie\Desktop\Python Scrapers\last_backup_timestamp.txt"
+                  r"c:\Users\jessie\Desktop\LICENSE.chromedriver"]
+
+# destination_folder = r"M:\Jessie" # backup location to back things up to/this was my Zadok folder
+destination_folder = r"D:\Work" # Should go to flash drive D
+last_backup_file = r"C:\Users\jessie\Desktop\Python Scrapers\last_backup_timestamp.txt" #should be made on its own/my current device
 
 # Call the function to perform the backup
 backup_data(source_folders, destination_folder, last_backup_file)
